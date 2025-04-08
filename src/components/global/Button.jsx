@@ -8,7 +8,6 @@ function Button({title, onClick}) {
         className="
             py-2
             px-4
-            mt-4
             rounded-md
             transition
             font-medium

@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import Button from '../global/button';
 
-const tableHeading = ["Name", "Email", "Cell Number", "Profile URL"];
 
 function StudentRecord() {
 
+  const tableHeading = ["Name", "Email", "Cell Number", "Profile URL"];
+  
   const [stdetail, setstdetail] = useState([]);
   const [valueName, setvalueName] = useState('');
   const [valuemail, setvaluemail] = useState('');
@@ -50,7 +51,7 @@ function StudentRecord() {
             <form className="flex flex-col">
                 <input type="text" value={valueName} onChange={changeName} className="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" placeholder="Full Name" />
                 <input type="email" value={valuemail} onChange={changeEmail} className="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" placeholder="Email" />
-                <input type="text" value={valuenumber} onChange={changeNumber} className="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" placeholder="Phone Number" />
+                <input type="number" value={valuenumber} onChange={changeNumber} className="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" placeholder="Phone Number" />
                 <input type="text" value={valueurl} onChange={changeUrl} className="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" placeholder="LinkedIn Profile URL" />
                 <Button title={'Add Detail'} onClick={addDetail} />
             </form>
