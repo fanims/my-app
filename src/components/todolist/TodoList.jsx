@@ -19,7 +19,7 @@ function TodoList() {
         <div>
             <h2 className='text-5xl text-black font-medium'>TodoList</h2>
             <div className='mt-4 flex items-center gap-3.5 p-4 rounded-lg bg-[#f7f7f8]'>
-                <input type="text" value={inputValue} onChange={inputChange} className='border border-gray-600' />
+                <input type="text" value={inputValue} onChange={inputChange} className='border border-gray-600 w-full rounded-sm' />
                 <button className='cursor-pointer px-1.5 bg-green-700 text-white rounded' onClick={addItem}>Add</button>
             </div>
             <ul className='flex flex-col'>

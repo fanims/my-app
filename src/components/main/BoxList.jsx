@@ -38,8 +38,6 @@ function BoxList() {
                 })
             }
         </ul>
-        <TodoList/>
-        <StudentRecord/>
     </Fragment>
   );
 }

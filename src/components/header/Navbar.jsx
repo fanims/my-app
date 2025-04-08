@@ -6,23 +6,18 @@ const Navbar = () => {
         "About",
         "Contact Us"
     ]
-    const [isOpen, setisOpen] = useState(false);
   return (
     <Fragment>
         <nav>
             <ul className='flex item-center gap-3'>
                 {
-                    navigation.map(item => {
+                    navigation.map((item, index) => {
                         return(
-                            <li>{item}</li>
+                            <li key={index}>{item}</li>
                         )
                     })
                 }
             </ul>
-            <button className='cursor-pointer' onClick={() => setisOpen(!isOpen)}>Show</button>
-            {
-                isOpen && <h2>Chaaaaa</h2>
-            }
         </nav>
     </Fragment>
   )
