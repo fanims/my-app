@@ -26,24 +26,23 @@ function StudentRecord() {
   };
 
   const addDetail = (event) => {
-    event.preventDefault()
-    if (valueName.trim !== '') {
-      setstdetail((prevItem) => [...prevItem, valueName])
-      setvalueName('');
-    }
-    if (valuemail.trim !== '') {
-      setstdetail((prevItem) => [...prevItem, valuemail])
-      setvaluemail('');
-    }
-    if (valuenumber.trim !== '') {
-      setstdetail((prevItem) => [...prevItem, valuenumber])
-      setvaluenumber('');
-    }
-    if (valueurl.trim !== '') {
-      setstdetail((prevItem) => [...prevItem, valueurl])
-      setvalueurl('');
-    }
+    event.preventDefault();
+    let obj = {
+      userName: valueName,
+      email: valuemail,
+      phoneNumber: valuenumber,
+      profileUrl: valueurl,
+    };
+
+    setstdetail((prevItem) => [...prevItem, obj]);
+
+    setvalueName('');
+    setvaluemail('');
+    setvaluenumber('');
+    setvalueurl('');
+
   };
+
   return (
     <div className="flex gap-4 mt-10 items-start justify-center">
         <div className="w-full max-w-md bg-white rounded-lg shadow-md p-6">
@@ -68,14 +67,19 @@ function StudentRecord() {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                {
-                  stdetail.map((item, index) => (
-                    <td key={index} className='p-4 text-left'>{item}</td>
-                  ))
-                }
-              </tr>
-            </tbody>
+              {stdetail.map((student, index) => (
+                <tr key={index}>
+                  <td className='p-4 text-left'>{student.userName}</td>
+                  <td className='p-4 text-left'>{student.email}</td>
+                  <td className='p-4 text-left'>{student.phoneNumber}</td>
+                  <td className='p-4 text-left'>
+                    <a href={student.profileUrl} target="_blank" rel="noopener noreferrer">
+                      View Profile
+                    </a>
+                  </td>
+                </tr>
+              ))}
+          </tbody>
           </table>
         </div>
     </div>
