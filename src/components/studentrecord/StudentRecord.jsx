@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Button from '../global/button';
 
 const tableHeading = ["Name", "Email", "Cell Number", "Profile URL"];
 
@@ -51,7 +52,7 @@ function StudentRecord() {
                 <input type="email" value={valuemail} onChange={changeEmail} className="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" placeholder="Email" />
                 <input type="text" value={valuenumber} onChange={changeNumber} className="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" placeholder="Phone Number" />
                 <input type="text" value={valueurl} onChange={changeUrl} className="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" placeholder="LinkedIn Profile URL" />
-                <button type="submit" onClick={addDetail} className="bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-medium py-2 px-4 rounded-md mt-4 hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150 cursor-pointer">Add Detail</button>
+                <Button title={'Add Detail'} onClick={addDetail} />
             </form>
         </div>
         <div className="w-full bg-white rounded-lg shadow-md p-6">
