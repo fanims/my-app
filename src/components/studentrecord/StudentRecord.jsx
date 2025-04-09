@@ -79,6 +79,13 @@ function StudentRecord() {
                   </td>
                 </tr>
               ))}
+              {stdetail.length === 0 && (
+                <tr>
+                  <td colSpan={4} className='p-4 text-center text-gray-500'>
+                    No data added yet.
+                  </td>
+                </tr>
+              )}
             </tbody>
           </table>
         </div>
