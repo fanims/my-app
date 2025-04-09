@@ -79,7 +79,7 @@ function StudentRecord() {
                   </td>
                 </tr>
               ))}
-          </tbody>
+            </tbody>
           </table>
         </div>
     </div>
