@@ -28,7 +28,6 @@ function Invoice() {
             <li key={index} className='mt-2'>
               <div className='flex items-center gap-2'>
                 <h6 className='text-[18px] font-medium text-gray-900 w-full'>{item.productname}</h6>
-                <input type="number" placeholder='0' className='max-w-[80px] text-center' />
                 <span className='min-w-[50px] px-2 text-[18px] font-medium text-gray-900'>{item.productprice}</span>
                 <Button type='submit' className='btn-sm' title={'Add'} />
               </div>
