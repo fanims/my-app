@@ -21,7 +21,7 @@ function TodoList() {
             <h2 className='text-5xl text-black font-medium'>TodoList</h2>
             <div className='mt-4 flex items-center gap-3.5 p-4 rounded-lg bg-[#f7f7f8]'>
                 <input type="text" value={inputValue} onChange={inputChange} className="bg-white w-full text-gray-900 border-0 rounded-md p-2 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" placeholder="Enter Value" />
-                <Button title={'Add'} onClick={addItem}/>
+                <Button type='submit' className='btn' title={'Add'} onClick={addItem}/>
             </div>
             <ul className='flex flex-col'>
                 {

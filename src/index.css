@@ -1,5 +1,7 @@
 @import "tailwindcss";
-.btn{
+.btn,
+.btn-sm,
+.btn-del{
     @apply
     py-2
     px-4
@@ -15,6 +17,19 @@
     from-indigo-500
     hover:to-blue-600
     hover:bg-indigo-600;
+}
+.btn-sm,
+.btn-del-sm{
+    @apply
+    py-1
+    px-3
+    rounded;
+}
+.btn-del,
+.btn-del-sm{
+    @apply
+    text-white
+    bg-red-700;
 }
 .container{
     @apply 

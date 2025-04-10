@@ -30,7 +30,7 @@ function Invoice() {
                 <h6 className='text-[18px] font-medium text-gray-900 w-full'>{item.productname}</h6>
                 <input type="number" placeholder='0' className='max-w-[80px] text-center' />
                 <span className='min-w-[50px] px-2 text-[18px] font-medium text-gray-900'>{item.productprice}</span>
-                <button className='cursor-pointer'>Add</button>
+                <Button type='submit' className='btn-sm' title={'Add'} />
               </div>
             </li>
           ))}
@@ -53,7 +53,7 @@ function Invoice() {
               <td className='p-4 text-left'>Two</td>
               <td className='p-4 text-left'>Three</td>
               <td className='p-4 text-left'>
-                <button className='cursor-pointer px-1.5 bg-red-700 text-white rounded'>Del</button>
+                <Button type='submit' className='btn-del-sm' title={'Del'}/>
               </td>
             </tr>
         </tbody>
