@@ -5,18 +5,23 @@ import TodoList from './components/todolist/TodoList'
 import StudentRecord from './components/studentrecord/StudentRecord'
 import Invoice from './components/invoice/Invoice'
 import InvoiceGpt from './components/invoice/InvoiceGpt'
-
+import Sidebar from './components/sidebar/Sidebar'
 function App() {
 
   return (
     <Fragment>
-        <Header/>
-        <div className='container p-8'>
-          <TodoList/>
-          <StudentRecord/>
-          <Invoice/>
-          <InvoiceGpt/>
+      <div className='flex h-screen'>
+        <Sidebar/>
+        <div className='w-full'>
+          <Header/>
+          <div className='container p-8'>
+            <TodoList/>
+            <StudentRecord/>
+            <Invoice/>
+            <InvoiceGpt/>
+          </div>
         </div>
+      </div>
     </Fragment>
   )
 }
