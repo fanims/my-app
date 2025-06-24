@@ -10,13 +10,9 @@ import Sidebar from './components/sidebar/Sidebar'
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Sidebar/>
-  },
-  {
-    path: "/",
     element: <TodoList/>
   },
-  { 
+  {
     path: "/student",
     element: <StudentRecord/>
   },
