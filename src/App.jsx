@@ -1,27 +1,45 @@
 import { Fragment } from 'react'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import './index.css'
-import Header from './components/header/Header'
+import Navbar from './components/header/Navbar'
 import TodoList from './components/todolist/TodoList'
 import StudentRecord from './components/studentrecord/StudentRecord'
 import Invoice from './components/invoice/Invoice'
-import InvoiceGpt from './components/invoice/InvoiceGpt'
 import Sidebar from './components/sidebar/Sidebar'
-function App() {
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Sidebar/>
+  },
+  {
+    path: "/",
+    element: <TodoList/>
+  },
+  { 
+    path: "/student",
+    element: <StudentRecord/>
+  },
+  {
+    path: "/invoice",
+    element: <Invoice/>
+  },
+])
+
+function App() {
   return (
     <Fragment>
-      <div className='flex h-screen'>
-        <Sidebar/>
-        <div className='w-full'>
-          <Header/>
-          <div className='container p-8'>
-            <TodoList/>
-            <StudentRecord/>
-            <Invoice/>
-            <InvoiceGpt/>
+      <RouterProvider router={router}>
+        <div className='flex h-screen'>
+          <Sidebar/>
+          <div className='w-full'>
+            <Navbar/>
+            <div className='container p-8'>
+              <RouterProvider router={router} />
+            </div>
           </div>
         </div>
-      </div>
+      </RouterProvider>
     </Fragment>
   )
 }
